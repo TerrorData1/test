@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .navbar desktop {
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  .logo a {
+    font-weight: 800;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+    background-color: rgb(167, 167, 167);
+  
+  }
+  
+  label {
+    display: block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+  
+  label input {
+    appearance: none;
+  }
+  
+  label .logo_menu {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgb(130, 129, 129);
+    border-radius: 10px;
+  }
+  
+  label .logo_menu::before {
+    content: "\f0c9";
+    font-family: "Font Awesome 6 Free";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+  }
+  
+  label input:checked~.logo_menu::before {
+    content: "\f00d";
+  }
+  
+  .test {
+    width: 100%;
+    height: 0;
+    background: yellow;
+    transition: 0.5s;
+  }
+  
+  label input:checked~.test {
+    height: 300px;
+  }
+  
+  .dropdown {
+  
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  
+  label input:checked~.dropdown {
+    text-decoration: none;
+    justify-content: space-around;
+  
+  }
